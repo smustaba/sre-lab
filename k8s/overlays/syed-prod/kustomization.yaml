@@ -6,8 +6,9 @@ namePrefix: prod-
 namespace: syed-prod
 
 resources:
-  - ../../base
-  - namespace.yaml
+- ../../base
+- namespace.yaml
+- ingress.yaml
 
 commonLabels:
   environment: prod
