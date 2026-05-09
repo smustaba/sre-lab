@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+
+metadata:
+  name: dev-ingress
+
+spec:
+  ingressClassName: nginx
+
+  rules:
+  - host: dev.local
+
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+
+        backend:
+          service:
+            name: dev-sre-service
+
+            port:
+              number: 80
