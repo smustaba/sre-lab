@@ -6,8 +6,9 @@ namePrefix: dev-
 namespace: syed-dev
 
 resources:
-  - ../../base
-  - namespace.yaml
+- ../../base
+- namespace.yaml
+- ingress.yaml
 
 patches:
   - target:
